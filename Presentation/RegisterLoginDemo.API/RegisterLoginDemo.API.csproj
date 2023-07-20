@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.9">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\RegisterLoginDemo.Application\RegisterLoginDemo.Application.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\RegisterLoginDemo.Infrastructure\RegisterLoginDemo.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\RegisterLoginDemo.Persistance\RegisterLoginDemo.Persistance.csproj" />
+  </ItemGroup>
+
+</Project>

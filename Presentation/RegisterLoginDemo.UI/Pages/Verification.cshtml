@@ -1,0 +1,29 @@
+﻿@page
+@model RegisterLoginDemo.Pages.VerificationModel
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <div id="errorMessage" style="color: red; font-weight: bold;">@TempData["ErrorMessage"]</div>
+}
+
+@if (TempData["Message"] != null)
+{
+    <div id="successMessage" style="color: green; font-weight: bold;">@TempData["Message"]</div>
+}
+
+<form id="verificationForm" method="post">
+    <label for="verificationCode">Verification Code:</label>
+    <input type="text" id="verificationCode" name="verificationCode" required />
+    <br />
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var successMessage = '@TempData["Message"]';
+        if (successMessage) {
+            var successMessageElement = document.getElementById('successMessage');
+            successMessageElement.innerText = successMessage;
+        }
+    });
+</script>
